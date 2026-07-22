@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Vehicle Service Booking System
+</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="navbar"></div>
+
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>
+Keep Your Vehicle
+<br>
+Running Smoothly 🚗
+</h1>
+
+
+<p>
+Professional vehicle service booking system.
+<br>
+Book maintenance, track services,
+and manage your vehicle easily.
+</p>
+
+
+
+<div class="hero-buttons">
+
+
+<a href="register.html" class="btn">
+Customer Registration
+</a>
+
+
+<a href="login.html" class="btn2">
+Customer Login
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="services">
+
+
+<h2>
+Our Services
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+🛢 Oil Change
+</h3>
+
+<p>
+Engine oil replacement to improve performance.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🔧 Full Service
+</h3>
+
+<p>
+Complete vehicle inspection and maintenance.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🚗 Brake Repair
+</h3>
+
+<p>
+Brake checking and safety maintenance.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+⚙ Engine Check
+</h3>
+
+<p>
+Professional engine diagnosis and repair.
+</p>
+
+</div>
+    
+    <div class="card">
+
+<h3>
+🔩 Other Services
+</h3>
+
+<p>
+Additional vehicle repairs and customized maintenance services.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="about">
+
+
+<h2>
+Why Choose Us?
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+Experienced Mechanics
+</h3>
+
+<p>
+Skilled technicians providing quality service.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Easy Booking
+</h3>
+
+<p>
+Book your vehicle service anytime online.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Service Tracking
+</h3>
+
+<p>
+Track booking status and service history.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Affordable Prices
+</h3>
+
+<p>
+Reliable service at reasonable prices.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                📞 +94 77 452 21 67
+            </p>
+
+            <p>
+                ✉ support@royaldrivemotors.com
+            </p>
+
+            <p>
+                🌐 www.Royal Drive Motors.com
+            </p>
+
+        </div>
+
+
+
+
+        <div class="footer-box">
+
+            <h3>Opening Hours</h3>
+
+            <p>
+                Monday - Friday
+                <br>
+                8.00 AM - 6.00 PM
+            </p>
+
+            <p>
+                Saturday
+                <br>
+                8.00 AM - 2.00 PM
+            </p>
+
+            <p>
+                Sunday - Closed
+            </p>
+
+        </div>
+
+
+
+
+        <div class="footer-box">
+
+            <h3>Location</h3>
+
+            <p>
+          
+              📍 No,125,High Level Road,Maharagama,Colombo,Sri Lanka
+            </p>
+            
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <footer>
+  <p>© <span id="year"></span> Vehicle Service Booking System | All Rights Reserved</p>
+</footer>
+
+<script>
+  // JavaScript code to auto-update year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+    </div>
+
+
+
+</footer>
+
+
+
+
+<script>
+
+
+fetch("navbar.html")
+
+.then(response=>response.text())
+
+.then(data=>{
+
+document.getElementById("navbar").innerHTML=data;
+
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>
