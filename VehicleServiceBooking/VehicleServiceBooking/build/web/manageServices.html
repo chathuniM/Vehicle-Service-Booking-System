@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Service Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin-dashboard.css">
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<body>
+
+
+
+<div class="admin-sidebar">
+
+
+<div class="admin-logo">
+
+<i class="fa-solid fa-car"></i>
+
+<span>
+Vehicle Service
+</span>
+
+<small>
+Admin Panel
+</small>
+
+</div>
+
+
+
+
+<a href="adminDashboard.html" >
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+
+
+<a href="manageUsers.html">
+
+<i class="fa-solid fa-users"></i>
+
+Users
+
+</a>
+
+
+
+
+<a href="adminBookings.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Bookings
+
+</a>
+
+
+
+
+<a href="manageServices.html" class="active">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+Services
+
+</a>
+
+
+
+</div>
+
+
+<!-- MAIN AREA -->
+
+
+<div class="main">
+
+
+
+
+
+<!-- HEADER -->
+
+
+<div class="top-header">
+
+
+<h2>
+Service Management
+</h2>
+
+
+
+<a href="LogoutServlet" class="logout-btn">
+Logout
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+
+
+
+<!-- ADD SERVICE -->
+
+
+<div class="add-service-card">
+
+
+<h2>
+Add New Service
+</h2>
+
+
+
+<form action="AddServiceServlet" method="post">
+
+
+
+<label>
+Service Name
+</label>
+
+
+<input type="text"
+name="serviceName"
+placeholder="Enter service name"
+required>
+
+
+
+<label>
+Description
+</label>
+
+
+<input type="text"
+name="description"
+placeholder="Enter description"
+required>
+
+
+
+
+<label>
+Price
+</label>
+
+
+<input type="number"
+name="price"
+placeholder="Enter price"
+required>
+
+
+
+
+<button type="submit">
+
+Add Service
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SERVICE TABLE -->
+
+
+<div class="table-container">
+
+
+
+<h2>
+Available Services
+</h2>
+
+
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+<th>
+ID
+</th>
+
+
+<th>
+Service Name
+</th>
+
+
+<th>
+Description
+</th>
+
+
+<th>
+Price
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="serviceTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+fetch("AdminServiceServlet")
+
+
+.then(response=>response.text())
+
+
+.then(data=>{
+
+
+document.getElementById("serviceTable").innerHTML=data;
+
+
+})
+
+
+.catch(error=>{
+
+
+console.log("Error Loading Services : "+error);
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
