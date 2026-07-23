@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin-dashboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<body>
+
+
+<div class="admin-sidebar">
+
+
+<div class="admin-logo">
+
+<i class="fa-solid fa-car"></i>
+
+<span>
+Vehicle Service
+</span>
+
+<small>
+Admin Panel
+</small>
+
+</div>
+
+
+
+
+<a href="adminDashboard.html" class="active">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+
+
+<a href="manageUsers.html">
+
+<i class="fa-solid fa-users"></i>
+
+Users
+
+</a>
+
+
+
+
+<a href="adminBookings.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Bookings
+
+</a>
+
+
+
+
+<a href="manageServices.html">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+Services
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+<!-- MAIN CONTENT -->
+
+<div class="admin-main">
+
+
+
+<div class="admin-header">
+
+
+<div class="welcome-box">
+
+
+<h2>
+Welcome Admin 
+</h2>
+
+
+<p>
+Vehicle Service Management System
+</p>
+
+
+</div>
+
+
+
+<div class="admin-profile">
+
+
+<div class="profile-icon">
+
+<i class="fa-solid fa-user-shield"></i>
+
+</div>
+
+
+
+<a href="LogoutServlet" class="admin-logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="admin-container">
+
+
+
+<h2 class="admin-title">
+Dashboard Overview
+</h2>
+
+
+
+
+
+<!-- STATISTICS -->
+
+
+<div class="admin-cards">
+
+
+
+<div class="admin-card">
+<div class="card-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+<h3>
+Total Users
+</h3>
+
+<h1 id="userCount">
+0
+</h1>
+
+<p>
+Registered Customers
+</p>
+
+</div>
+
+
+
+
+<div class="admin-card">
+    
+<div class="card-icon">
+<i class="fa-solid fa-car"></i>
+</div>
+<h3>
+Total Vehicles
+</h3>
+
+<h1 id="vehicleCount">
+0
+</h1>
+
+<p>
+Registered Vehicles
+</p>
+
+</div>
+
+
+
+
+
+<div class="admin-card">
+<div class="card-icon">
+<i class="fa-solid fa-calendar-check"></i>
+</div>
+<h3>
+Total Bookings
+</h3>
+
+<h1 id="bookingCount">
+0
+</h1>
+
+<p>
+Service Bookings
+</p>
+
+</div>
+
+
+
+
+
+<div class="admin-card">
+<div class="card-icon">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+</div>
+<h3>
+Total Services
+</h3>
+
+<h1 id="serviceCount">
+0
+</h1>
+
+<p>
+Available Services
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- RECENT BOOKINGS -->
+
+
+<div class="dashboard-row">
+
+
+
+<div class="recent-card">
+
+
+<h2>
+Recent Bookings
+</h2>
+
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>
+Customer
+</th>
+
+
+<th>
+Vehicle
+</th>
+
+
+<th>
+Service
+</th>
+
+
+<th>
+Date
+</th>
+
+
+<th>
+Status
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="recentBookingTable">
+
+
+<tr>
+
+<td colspan="5">
+Loading...
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="summary-card">
+
+
+<h2>
+Quick Actions
+</h2>
+
+
+
+<div class="quick-actions">
+
+
+<a href="manageUsers.html" class="quick-card">
+
+
+<h3>
+Users
+</h3>
+
+
+<p>
+Manage customer accounts
+</p>
+
+
+<span>
+Open
+</span>
+
+
+</a>
+
+
+
+
+
+<a href="adminBookings.html" class="quick-card">
+
+
+<h3>
+Bookings
+</h3>
+
+
+<p>
+Manage service bookings
+</p>
+
+
+<span>
+Open
+</span>
+
+
+</a>
+
+
+
+
+
+
+<a href="manageServices.html" class="quick-card">
+
+
+<h3>
+Services
+</h3>
+
+
+<p>
+Manage available services
+</p>
+
+
+<span>
+Open
+</span>
+
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+<!-- CHART SECTION -->
+
+
+<h2 class="admin-title">
+
+Booking Analytics
+
+</h2>
+
+
+
+<div class="chart-container">
+
+
+
+<div class="chart-card">
+
+
+<h3>
+Booking Status
+</h3>
+
+
+<div class="chart-box">
+
+<canvas id="statusChart"></canvas>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+Monthly Bookings
+</h3>
+
+
+<div class="chart-box">
+
+<canvas id="monthlyChart"></canvas>
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+// LOAD STATISTICS
+
+
+fetch("AdminDashboardServlet")
+
+
+.then(response => response.json())
+
+
+.then(data => {
+
+
+document.getElementById("userCount").innerHTML=data.users;
+
+
+document.getElementById("vehicleCount").innerHTML=data.vehicles;
+
+
+document.getElementById("bookingCount").innerHTML=data.bookings;
+
+
+document.getElementById("serviceCount").innerHTML=data.services;
+
+
+
+})
+
+.catch(error=>{
+
+
+console.log(error);
+
+
+});
+
+
+
+
+
+
+
+
+
+// LOAD RECENT BOOKINGS
+
+
+fetch("AdminRecentBookingsServlet")
+
+
+.then(response=>response.text())
+
+
+.then(data=>{
+
+
+document.getElementById("recentBookingTable").innerHTML=data;
+
+
+})
+
+.catch(error=>{
+
+
+console.log(error);
+
+
+});
+
+
+
+
+
+
+
+
+
+// LOAD CHARTS
+
+
+fetch("AdminChartServlet")
+
+
+.then(response=>response.json())
+
+
+.then(data=>{
+
+
+
+
+
+// STATUS DOUGHNUT CHART
+
+
+new Chart(
+
+document.getElementById("statusChart"),
+
+{
+
+
+type:"doughnut",
+
+
+data:{
+
+
+labels:[
+
+"Pending",
+
+"Approved",
+
+"Completed"
+
+],
+
+
+datasets:[{
+
+
+data:[
+
+data.pending,
+
+data.approved,
+
+data.completed
+
+]
+
+
+}]
+
+
+},
+
+
+
+options:{
+
+
+responsive:true,
+
+
+maintainAspectRatio:false
+
+
+}
+
+
+
+}
+
+
+);
+
+
+
+
+
+
+
+
+// MONTHLY BAR CHART
+
+
+new Chart(
+
+document.getElementById("monthlyChart"),
+
+
+{
+
+
+type:"bar",
+
+
+data:{
+
+
+labels:data.months,
+
+
+datasets:[{
+
+
+label:"Bookings",
+
+
+data:data.monthCounts
+
+
+
+}]
+
+
+},
+
+
+
+
+options:{
+
+
+responsive:true,
+
+
+maintainAspectRatio:false
+
+
+}
+
+
+
+}
+
+
+
+);
+
+
+
+
+
+})
+
+
+.catch(error=>{
+
+
+console.log(error);
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
