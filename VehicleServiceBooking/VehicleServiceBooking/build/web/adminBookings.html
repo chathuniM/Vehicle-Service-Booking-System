@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Booking Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin-dashboard.css">
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+
+/* ADMIN BOOKING PAGE */
+
+.admin-page{
+
+    margin-left:250px;
+    padding:40px;
+    background:#f4f7fb;
+    min-height:100vh;
+
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:250px;
+    height:100vh;
+    background:#0b1f38;
+    color:white;
+    padding:30px 18px;
+    position:fixed;
+    left:0;
+    top:0;
+
+}
+
+
+.sidebar .logo{
+
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:45px;
+
+}
+
+
+
+.sidebar a{
+
+    display:block;
+    color:#dce8f5;
+    text-decoration:none;
+    padding:14px 18px;
+    margin:12px 0;
+    border-radius:10px;
+    font-weight:600;
+
+}
+
+
+
+.sidebar a:hover{
+
+    background:#17375e;
+    color:white;
+
+}
+
+
+
+/* TOP HEADER */
+
+.top-header{
+
+    margin-left:250px;
+
+    background:white;
+
+    padding:22px 45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+.top-header h2{
+
+    color:#0b3d91;
+
+}
+
+
+
+/* LOGOUT */
+
+.logout-btn{
+
+    background:#dc3545;
+
+    color:white;
+
+    padding:10px 25px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+/* TABLE BOX */
+
+
+.table-container{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+.table-container h2{
+
+    color:#0b3d91;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+thead{
+
+    background:#0b3d91;
+
+    color:white;
+
+}
+
+
+
+th{
+
+    padding:15px;
+
+}
+
+
+
+td{
+
+    padding:14px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+tr:hover{
+
+    background:#f1f7ff;
+
+}
+
+
+
+/* STATUS */
+
+
+.pending-status{
+
+    background:#ffc107;
+
+    color:black;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.approved-status{
+
+    background:#198754;
+
+    color:white;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.completed-status{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* BUTTONS */
+
+
+.approve-btn{
+
+    background:#198754;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.complete-btn{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.approve-btn:hover,
+.complete-btn:hover{
+
+    opacity:0.8;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="admin-sidebar">
+
+
+<div class="admin-logo">
+
+<i class="fa-solid fa-car"></i>
+
+<span>
+Vehicle Service
+</span>
+
+<small>
+Admin Panel
+</small>
+
+</div>
+
+
+
+
+<a href="adminDashboard.html" >
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+
+
+<a href="manageUsers.html">
+
+<i class="fa-solid fa-users"></i>
+
+Users
+
+</a>
+
+
+
+
+<a href="adminBookings.html" class="active">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Bookings
+
+</a>
+
+
+
+
+<a href="manageServices.html">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+Services
+
+</a>
+
+
+
+</div>
+
+
+
+
+<!-- HEADER -->
+
+
+<div class="top-header">
+
+
+<h2>
+
+Booking Management
+
+</h2>
+
+
+
+<a href="LogoutServlet" class="logout-btn">
+
+Logout
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- CONTENT -->
+
+
+<section class="admin-page">
+
+
+
+<div class="table-container">
+
+
+
+<h2>
+Customer Bookings
+</h2>
+
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Booking ID</th>
+
+<th>User ID</th>
+
+<th>Vehicle No</th>
+
+<th>Service</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="bookingTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<script>
+
+
+fetch("AdminBookingServlet")
+
+
+.then(response=>response.text())
+
+
+.then(data=>{
+
+
+document.getElementById("bookingTable").innerHTML=data;
+
+
+})
+
+
+.catch(error=>{
+
+
+console.log("Error Loading Bookings : "+error);
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
