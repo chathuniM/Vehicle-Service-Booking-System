@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Add Vehicle</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="css/customer.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="wrapper">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-car"></i>
+
+<h2>
+Vehicle Service
+</h2>
+
+<p>
+Customer Panel
+</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>
+Dashboard
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="addVehicle.html" class="active">
+
+<i class="fa-solid fa-car"></i>
+
+<span>
+Add Vehicle
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="vehicles.html">
+
+<i class="fa-solid fa-list"></i>
+
+<span>
+My Vehicles
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="booking.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>
+Book Service
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="bookingStatus.html">
+
+<i class="fa-solid fa-clock"></i>
+
+<span>
+Booking Status
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="serviceHistory.html">
+
+<i class="fa-solid fa-history"></i>
+
+<span>
+Service History
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="ProfileServlet">
+
+<i class="fa-solid fa-user"></i>
+
+<span>
+My Profile
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="reminder.html">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>
+Service Reminder
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="LogoutServlet">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>
+Logout
+</span>
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+<!-- MAIN -->
+
+
+<div class="main">
+
+
+
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+
+<div>
+
+
+<h2>
+Add Vehicle
+</h2>
+
+
+<p>
+Register your vehicle details for service booking
+</p>
+
+
+</div>
+
+
+
+<div class="header-right">
+
+
+<div class="profile">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+
+<a href="LogoutServlet" class="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PAGE TITLE -->
+
+
+<div class="page-title">
+
+
+<h1>
+Vehicle Registration
+</h1>
+
+
+<p>
+Enter your vehicle information below
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- FORM CARD -->
+
+
+<div class="form-card">
+
+
+
+<div class="card-title">
+
+
+<i class="fa-solid fa-car"></i>
+
+
+<h2>
+Add New Vehicle
+</h2>
+
+
+</div>
+
+
+
+
+
+<form action="AddVehicleServlet" method="post">
+
+
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Vehicle Number
+</label>
+
+
+<input type="text"
+
+name="vehicleNo"
+
+placeholder="Enter Vehicle Number"
+
+required>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Vehicle Type
+</label>
+
+
+<select name="type" required>
+
+
+<option value="" disabled selected>
+
+-- Select Type --
+
+</option>
+
+
+<option value="Car">
+
+Car
+
+</option>
+
+
+<option value="Van">
+
+Van
+
+</option>
+
+
+<option value="Bike">
+
+Bike
+
+</option>
+
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Vehicle Brand
+</label>
+
+
+<select name="brand" required>
+
+
+<option value="" disabled selected>
+
+-- Select Brand --
+
+</option>
+
+
+
+<option value="Toyota">
+
+Toyota
+
+</option>
+
+
+
+<option value="Honda">
+
+Honda
+
+</option>
+
+
+
+<option value="Nissan">
+
+Nissan
+
+</option>
+
+
+
+<option value="BMW">
+
+BMW
+
+</option>
+
+
+
+<option value="Suzuki">
+
+Suzuki
+
+</option>
+
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="form-actions">
+
+
+<button type="submit" class="btn btn-primary">
+
+
+<i class="fa-solid fa-plus"></i>
+
+Add Vehicle
+
+
+</button>
+
+
+
+
+
+<a href="vehicles.html" class="btn btn-danger">
+
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Cancel
+
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
