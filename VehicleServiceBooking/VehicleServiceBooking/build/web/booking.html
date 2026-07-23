@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Book Service</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="css/customer.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="wrapper">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-car"></i>
+
+<h2>
+Vehicle Service
+</h2>
+
+<p>
+Customer Panel
+</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>
+Dashboard
+</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+
+<a href="addVehicle.html">
+
+<i class="fa-solid fa-car"></i>
+
+<span>
+Add Vehicle
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="vehicles.html">
+
+<i class="fa-solid fa-list"></i>
+
+<span>
+My Vehicles
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="booking.html" class="active">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>
+Book Service
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="bookingStatus.html">
+
+<i class="fa-solid fa-clock"></i>
+
+<span>
+Booking Status
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="serviceHistory.html">
+
+<i class="fa-solid fa-history"></i>
+
+<span>
+Service History
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="ProfileServlet">
+
+<i class="fa-solid fa-user"></i>
+
+<span>
+My Profile
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="reminder.html">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>
+Reminder
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="LogoutServlet">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>
+Logout
+</span>
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+
+
+
+
+<!-- HEADER -->
+
+
+<div class="header">
+
+
+<div>
+
+
+<h2>
+Book Vehicle Service
+</h2>
+
+
+<p>
+Schedule your vehicle maintenance service easily
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="header-right">
+
+
+<div class="profile">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+
+
+<a href="LogoutServlet" class="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="page-title">
+
+
+<h1>
+Service Booking
+</h1>
+
+
+<p>
+Select your vehicle, service and preferred date
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- FORM -->
+
+<div class="form-card">
+
+
+
+<div class="card-title">
+
+
+<i class="fa-solid fa-calendar-check"></i>
+
+
+<h2>
+Book New Service
+</h2>
+
+
+</div>
+
+
+
+
+
+
+<form action="BookingServlet" method="post">
+
+
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Select Vehicle
+</label>
+
+
+<select name="vehicleNo" id="vehicleList" required>
+
+
+<option value="" disabled selected>
+
+-- Select Vehicle --
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Service Type
+</label>
+
+
+<select name="service" id="serviceList" required>
+
+
+<option value="" disabled selected>
+
+-- Select Service --
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Booking Date
+</label>
+
+
+<input type="date"
+
+id="bookingDate"
+
+name="date"
+
+required>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-actions">
+
+
+
+<button type="submit" class="btn btn-primary">
+
+
+<i class="fa-solid fa-check"></i>
+
+Book Now
+
+
+</button>
+
+
+
+
+<a href="dashboard.html" class="btn btn-danger">
+
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Cancel
+
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+// Load Vehicles
+
+
+fetch("VehicleDropdownServlet")
+
+.then(response=>response.text())
+
+.then(data=>{
+
+
+document.getElementById("vehicleList").innerHTML += data;
+
+
+});
+
+
+
+
+
+
+
+// Load Services
+
+
+fetch("ServiceDropdownServlet")
+
+.then(response=>response.text())
+
+.then(data=>{
+
+
+document.getElementById("serviceList").innerHTML += data;
+
+
+});
+
+
+
+
+
+
+
+
+
+// Minimum Date Today
+
+
+const today = new Date()
+.toISOString()
+.split("T")[0];
+
+
+document
+.getElementById("bookingDate")
+.setAttribute("min",today);
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
