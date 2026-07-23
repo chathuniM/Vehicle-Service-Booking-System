@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>My Vehicles</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="css/customer.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="wrapper">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-car"></i>
+
+<h2>
+Vehicle Service
+</h2>
+
+<p>
+Customer Panel
+</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="addVehicle.html">
+
+<i class="fa-solid fa-car"></i>
+
+<span>Add Vehicle</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="vehicles.html" class="active">
+
+<i class="fa-solid fa-list"></i>
+
+<span>My Vehicles</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="booking.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>Book Service</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="bookingStatus.html">
+
+<i class="fa-solid fa-clock"></i>
+
+<span>Booking Status</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="serviceHistory.html">
+
+<i class="fa-solid fa-history"></i>
+
+<span>Service History</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="ProfileServlet">
+
+<i class="fa-solid fa-user"></i>
+
+<span>My Profile</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="reminder.html">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>Reminder</span>
+
+</a>
+</li>
+
+
+
+
+<li>
+<a href="LogoutServlet">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+</li>
+
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+
+
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+
+<div>
+
+
+<h2>
+My Vehicles
+</h2>
+
+
+<p>
+Manage your registered vehicles
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="header-right">
+
+
+<div class="profile">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+
+<a href="LogoutServlet" class="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PAGE TITLE -->
+
+
+<div class="page-title">
+
+
+<h1>
+Registered Vehicles
+</h1>
+
+
+<p>
+View and manage all your vehicles
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- TABLE -->
+
+<div class="table-card">
+
+
+
+
+
+<div class="table-header">
+
+
+<h2>
+
+<i class="fa-solid fa-car"></i>
+
+My Vehicle List
+
+</h2>
+
+
+
+<input type="text"
+class="search-box"
+id="search"
+placeholder="Search vehicle...">
+
+
+</div>
+
+
+
+
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>
+Vehicle Number
+</th>
+
+
+<th>
+Type
+</th>
+
+
+<th>
+Brand
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="vehicleTable">
+
+
+<tr>
+
+<td colspan="4">
+
+Loading Vehicles...
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+
+
+</table>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+// LOAD VEHICLES
+
+fetch("ViewVehicleServlet")
+
+.then(response=>response.text())
+
+.then(data=>{
+
+
+document.getElementById("vehicleTable").innerHTML=data;
+
+
+})
+
+.catch(error=>{
+
+
+document.getElementById("vehicleTable").innerHTML=
+"<tr><td colspan='4'>Error Loading Vehicles</td></tr>";
+
+
+});
+
+
+
+
+
+
+
+// SEARCH TABLE
+
+
+document.getElementById("search")
+.addEventListener("keyup",function(){
+
+
+let value=this.value.toLowerCase();
+
+
+let rows=document.querySelectorAll("#vehicleTable tr");
+
+
+
+rows.forEach(row=>{
+
+
+let text=row.innerText.toLowerCase();
+
+
+if(text.includes(value)){
+
+row.style.display="";
+
+}
+
+else{
+
+row.style.display="none";
+
+}
+
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
