@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Manage Bookings</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div id="navbar"></div>
+
+
+
+<section class="admin-page">
+
+
+
+<div class="admin-top">
+
+
+<h1>
+Booking Management
+</h1>
+
+
+<a href="adminDashboard.html" class="back-btn">
+Back to Dashboard
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="table-container">
+
+
+
+<h2>
+Customer Bookings
+</h2>
+
+
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Booking ID</th>
+
+<th>User ID</th>
+
+<th>Vehicle</th>
+
+<th>Service</th>
+
+<th>Booking Date</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="bookingTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+// Load Navbar
+
+fetch("navbar.html")
+
+.then(response=>response.text())
+
+.then(data=>{
+
+document.getElementById("navbar").innerHTML=data;
+
+});
+
+
+
+
+
+// Load Booking Data From Database
+
+fetch("AdminBookingServlet")
+
+
+.then(response=>response.text())
+
+
+.then(data=>{
+
+
+document.getElementById("bookingTable").innerHTML=data;
+
+
+})
+
+.catch(error=>{
+
+
+console.log("Error Loading Bookings : "+error);
+
+
+});
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
