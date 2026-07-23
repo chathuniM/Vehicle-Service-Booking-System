@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Edit Service</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div id="navbar"></div>
+
+
+
+<a href="manageServices.html" class="back-btn">
+Back to Services
+</a>
+
+
+
+<h2>Edit Service</h2>
+
+
+
+<form action="UpdateServiceServlet" method="post">
+
+
+<input type="hidden" id="serviceId" name="serviceId">
+
+
+
+<label>Service Name</label>
+
+<input type="text"
+id="serviceName"
+name="serviceName"
+required>
+
+
+
+<label>Description</label>
+
+<textarea 
+id="description"
+name="description"
+required
+style="width:100%;height:100px;padding:10px;border-radius:5px;">
+</textarea>
+
+
+
+<label>Price</label>
+
+<input type="number"
+id="price"
+name="price"
+required>
+
+
+
+<button type="submit">
+
+Update Service
+
+</button>
+
+
+
+</form>
+
+
+
+<script>
+
+
+fetch("navbar.html")
+
+.then(response => response.text())
+
+.then(data=>{
+
+document.getElementById("navbar").innerHTML=data;
+
+});
+
+
+
+const params = new URLSearchParams(window.location.search);
+
+
+
+document.getElementById("serviceId").value =
+params.get("id");
+
+
+
+document.getElementById("serviceName").value =
+params.get("name");
+
+
+
+document.getElementById("description").value =
+params.get("description");
+
+
+
+document.getElementById("price").value =
+params.get("price");
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
