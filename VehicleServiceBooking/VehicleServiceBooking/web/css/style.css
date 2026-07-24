@@ -1,0 +1,3781 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+
+body{
+
+background:lightblue;
+
+}
+
+
+/* Header */
+
+header{
+
+background:#1f4e79;
+color:rgba(85, 132, 150, 0.37);
+padding:20px;
+text-align:center;
+
+}
+
+
+nav{
+
+margin-top:15px;
+
+}
+
+
+nav a{
+
+color:rgb(9, 9, 11);
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+
+}
+
+
+
+/* Home Page */
+
+.hero{
+
+height:400px;
+text-align:center;
+padding:100px 20px;
+background:#3498db;
+color:rgb(52, 21, 189);
+
+}
+
+
+.hero h2{
+
+font-size:35px;
+margin-bottom:20px;
+
+}
+
+
+.btn{
+
+background:#27ae60;
+color:rgb(13, 13, 14);
+padding:15px 30px;
+text-decoration:none;
+border-radius:5px;
+
+}
+
+
+
+/* Forms */
+
+
+h2{
+
+text-align:center;
+margin:30px;
+color:red;
+}
+
+
+form{
+
+width:400px;
+background:white;
+padding:25px;
+margin:20px auto;
+border-radius:10px;
+box-shadow:0px 0px 10px #aaa;
+
+}
+
+
+
+label{
+
+display:block;
+margin-top:15px;
+font-weight:bold;
+
+}
+
+
+input,select{
+
+width:100%;
+padding:10px;
+margin-top:5px;
+border:1px solid gray;
+border-radius:5px;
+
+}
+
+
+button{
+
+width:100%;
+padding:12px;
+margin-top:20px;
+background:#27ae60;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+
+}
+
+
+button:hover{
+
+background:#219150;
+
+}
+
+
+
+/* Dashboard Menu */
+
+
+.menu{
+
+text-align:center;
+margin-top:40px;
+
+}
+
+
+.menu a{
+
+display:block;
+width:300px;
+margin:15px auto;
+padding:15px;
+background:#3498db;
+color:white;
+text-decoration:none;
+border-radius:5px;
+
+}
+
+
+.menu a:hover{
+
+background:#21618c;
+
+}
+
+
+
+/* Tables */
+
+
+table{
+
+width:85%;
+margin:30px auto;
+background:white;
+border-collapse:collapse;
+
+}
+
+
+th{
+
+background:#1f4e79;
+color:white;
+
+}
+
+
+th,td{
+
+padding:15px;
+border:1px solid #ddd;
+text-align:center;
+
+}
+
+
+
+/* Cards */
+
+
+.card{
+
+background:white;
+width:400px;
+margin:30px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+
+}
+
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+form,.card{
+
+width:90%;
+
+}
+
+
+.menu a{
+
+width:90%;
+
+}
+.history-section{
+
+padding:40px;
+
+}
+
+
+
+.vehicle-card{
+
+background:white;
+
+width:400px;
+
+margin:20px auto;
+
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px #aaa;
+
+}
+
+
+
+.vehicle-card h3{
+
+color:#1f4e79;
+
+margin-bottom:15px;
+
+}
+
+
+
+.completed{
+
+background:#27ae60;
+
+color:white;
+
+padding:6px 12px;
+
+border-radius:15px;
+
+font-size:14px;
+
+}
+
+
+table tr:nth-child(even){
+
+background:#f8f8f8;
+
+}
+
+
+table tr:hover{
+
+background:#eaf2f8;
+
+}
+}
+
+
+
+
+
+/* HOME PAGE */
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f6f9;
+}
+
+nav{
+    background:#0d6efd;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.logo{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        90deg,
+        #0b3d91,
+        #1e88e5
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(#0d6efd,#5aa7ff);
+    color:white;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    width:60%;
+    margin:auto;
+    font-size:18px;
+    line-height:30px;
+}
+
+.btn,.btn2{
+    display:inline-block;
+    margin:20px 10px;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn{
+    background:#ffc107;
+    color:black;
+}
+
+.btn2{
+    background:white;
+    color:#0d6efd;
+}
+
+#services,#about{
+    padding:60px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard{
+
+text-align:center;
+padding:50px;
+
+}
+
+
+.dashboard-cards{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+
+}
+
+
+
+.dash-card{
+
+background:white;
+width:250px;
+padding:25px;
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+transition:0.3s;
+
+}
+
+
+
+.dash-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+.dash-card a{
+
+display:inline-block;
+
+background:#0d6efd;
+
+color:white;
+
+padding:10px 25px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+margin-top:10px;
+
+}
+
+
+/* PROFILE PAGE */
+
+.profile-page{
+
+    background:#f4f6f9;
+    min-height:100vh;
+    padding-top:50px;
+
+}
+
+
+.profile-card{
+
+    width:400px;
+    background:white;
+    margin:30px auto;
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    text-align:center;
+
+}
+
+
+.profile-card h2{
+
+    color:#0d6efd;
+    margin-bottom:25px;
+
+}
+
+
+.profile-card p{
+
+    font-size:18px;
+    margin:15px 0;
+
+    color:#333;
+
+}
+
+
+.profile-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+}
+
+
+.profile-card a:hover{
+
+    background:#084298;
+
+}
+
+/* ==========================
+   PROFILE PAGE DESIGN
+========================== */
+
+.profile-page{
+
+    min-height:100vh;
+    background:#f4f6f9;
+    padding-top:50px;
+    font-family:Arial, sans-serif;
+
+}
+
+
+
+.profile-card{
+
+    width:420px;
+    background:white;
+
+    margin:40px auto;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
+    text-align:center;
+
+}
+
+
+
+.profile-card h2{
+
+    color:#0d6efd;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.profile-card p{
+
+    background:#f8f9fa;
+
+    padding:12px;
+
+    margin:12px 0;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    color:#333;
+
+}
+
+
+
+.profile-card b{
+
+    color:#0d6efd;
+
+}
+
+
+
+.profile-card a{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:12px 30px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+
+
+.profile-card a:hover{
+
+    background:#084298;
+
+    transform:scale(1.05);
+
+}
+/* PROFILE PAGE */
+
+.profile-page{
+    min-height:100vh;
+    background:#f4f6f9;
+    padding-top:50px;
+    font-family:Arial, sans-serif;
+}
+
+
+.profile-card{
+
+    width:420px;
+    background:white;
+
+    margin:40px auto;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
+    text-align:center;
+
+}
+
+
+.profile-card h2{
+
+    color:#0d6efd;
+    font-size:30px;
+    margin-bottom:25px;
+
+}
+
+
+.profile-card p{
+
+    background:#f8f9fa;
+
+    padding:12px;
+
+    margin:12px 0;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    color:#333;
+
+}
+
+
+.profile-card b{
+
+    color:#0d6efd;
+
+}
+
+
+.profile-card a{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:12px 30px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+
+.profile-card a:hover{
+
+    background:#084298;
+
+}
+/* LOGOUT BUTTON */
+
+.logout-btn{
+
+    display:inline-block;
+
+    background:#dc3545 !important;
+
+    color:white !important;
+
+    padding:10px 25px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+}
+
+
+.logout-btn:hover{
+
+    background:#b02a37 !important;
+
+}
+
+
+/* =========================
+   REMINDER PAGE DESIGN
+========================= */
+
+
+.reminder-page{
+
+    min-height:100vh;
+    background:#f4f6f9;
+    padding-top:40px;
+
+}
+
+
+
+.reminder-card{
+
+    width:420px;
+
+    background:white;
+
+    margin:30px auto;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+
+}
+
+
+
+.reminder-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.reminder-title{
+
+    text-align:center;
+
+    color:#0d6efd;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.reminder-card p{
+
+    background:#f8f9fa;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin:12px 0;
+
+    font-size:16px;
+
+}
+
+
+
+.reminder-card b{
+
+    color:#0d6efd;
+
+}
+
+
+
+/* STATUS BADGE */
+
+
+.status{
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+
+
+.upcoming{
+
+    background:#0d6efd;
+
+}
+
+
+
+.completed{
+
+    background:#27ae60;
+
+}
+
+
+
+.overdue{
+
+    background:#dc3545;
+
+}
+
+
+
+
+.back-btn{
+
+    display:block;
+
+    width:220px;
+
+    margin:30px auto;
+
+    padding:12px;
+
+    text-align:center;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+
+
+.back-btn:hover{
+
+    background:#084298;
+
+}
+
+.profile-card a:nth-of-type(2){
+
+background:#27ae60;
+
+}
+
+
+.profile-card a:nth-of-type(2):hover{
+
+background:#1e8449;
+
+}
+
+/* ==========================
+   ADMIN SERVICE BUTTONS
+========================== */
+
+.edit-btn{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    margin-right:8px;
+
+    transition:0.3s;
+
+}
+
+
+.edit-btn:hover{
+
+    background:#084298;
+
+}
+
+
+
+.delete-btn{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#dc3545;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+
+.delete-btn:hover{
+
+    background:#bb2d3b;
+
+}
+
+.pending{
+
+background:#ffc107;
+color:black;
+padding:6px 15px;
+border-radius:20px;
+font-weight:bold;
+
+}
+
+
+.approved{
+
+background:#27ae60;
+color:white;
+padding:6px 15px;
+border-radius:20px;
+font-weight:bold;
+
+}
+
+
+.status{
+
+background:#3498db;
+color:white;
+padding:6px 15px;
+border-radius:20px;
+font-weight:bold;
+
+}
+
+.approve-btn{
+
+background:#27ae60;
+color:white;
+padding:7px 15px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+.complete-btn{
+
+background:#3498db;
+color:white;
+padding:7px 15px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+.approve-btn:hover,
+.complete-btn:hover{
+
+opacity:0.8;
+
+}
+
+.back-btn{
+
+display:inline-block;
+background:#34495e;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+margin:20px;
+
+}
+
+
+.back-btn:hover{
+
+opacity:0.8;
+
+}
+.delete-btn{
+
+background:#e74c3c;
+color:white;
+padding:7px 15px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+.delete-btn:hover{
+
+opacity:0.8;
+
+}
+
+.small-logout{
+
+    padding:6px 15px !important;
+    font-size:14px;
+    margin-left:15px;
+
+}
+
+.dash-card h1{
+
+font-size:42px;
+
+color:#0d6efd;
+
+margin:18px 0;
+
+font-weight:bold;
+
+}
+
+
+
+/* ================================
+   ADMIN DASHBOARD FINAL OVERRIDE
+================================ */
+
+
+body{
+    background:#f4f6f9;
+}
+
+
+
+/* Header */
+
+.admin-header{
+
+    width:100%;
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    justify-content:space-between !important;
+
+    align-items:center !important;
+
+    padding:25px 60px !important;
+
+}
+
+
+
+.admin-header h2{
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    color:#0d6efd !important;
+
+    font-size:28px !important;
+
+    text-align:left !important;
+
+}
+
+
+
+
+
+/* Logout */
+
+.admin-logout{
+
+    width:auto !important;
+
+    height:auto !important;
+
+    margin:0 !important;
+
+    padding:8px 18px !important;
+
+
+    background:#dc3545 !important;
+
+    color:white !important;
+
+
+    text-decoration:none !important;
+
+    border-radius:6px !important;
+
+    font-size:14px !important;
+
+    font-weight:bold !important;
+
+}
+
+
+
+
+
+/* Cards container */
+
+
+.dashboard-cards{
+
+    width:90%;
+
+    margin:40px auto !important;
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+    gap:25px !important;
+
+    flex-wrap:wrap !important;
+
+}
+
+
+
+
+/* Card */
+
+
+.dash-card{
+
+    width:230px !important;
+
+    min-height:160px !important;
+
+    background:white !important;
+
+
+    padding:25px !important;
+
+
+    border-radius:15px !important;
+
+
+    text-align:center !important;
+
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15) !important;
+
+}
+
+
+
+
+
+.dash-card h3{
+
+    margin:10px 0 !important;
+
+    color:#333 !important;
+
+}
+
+
+
+.dash-card h1{
+
+    color:#0d6efd !important;
+
+    font-size:40px !important;
+
+}
+
+
+
+
+
+.dash-card p{
+
+    color:#555 !important;
+
+}
+
+
+
+
+.dash-card a{
+
+    display:inline-block !important;
+
+    width:auto !important;
+
+    margin-top:15px !important;
+
+    padding:8px 20px !important;
+
+
+    background:#0d6efd !important;
+
+    color:white !important;
+
+
+    border-radius:6px !important;
+
+    text-decoration:none !important;
+
+}
+/* ===== ADMIN DASHBOARD LAST FIX ===== */
+
+.admin-header{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    width:100% !important;
+    padding:25px 60px !important;
+}
+
+
+.admin-header h2{
+    margin:0 !important;
+    color:#0d6efd !important;
+    text-align:left !important;
+}
+
+
+
+/* Logout */
+
+.admin-logout{
+
+    display:inline-block !important;
+
+    width:auto !important;
+
+    background:#dc3545 !important;
+
+    color:white !important;
+
+    padding:10px 25px !important;
+
+    border-radius:8px !important;
+
+    text-decoration:none !important;
+
+    margin:0 !important;
+
+}
+
+
+
+.dashboard-cards{
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    justify-content:center !important;
+
+    gap:25px !important;
+
+    flex-wrap:wrap !important;
+
+    width:90% !important;
+
+    margin:40px auto !important;
+
+}
+
+
+
+.dash-card{
+
+    width:230px !important;
+
+    background:white !important;
+
+    padding:25px !important;
+
+    border-radius:15px !important;
+
+    text-align:center !important;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15) !important;
+
+}
+
+
+
+.dash-card a{
+
+    display:inline-block !important;
+
+    width:auto !important;
+
+    background:#0d6efd !important;
+
+    color:white !important;
+
+    padding:10px 25px !important;
+
+    border-radius:8px !important;
+
+    text-decoration:none !important;
+
+}
+
+
+
+.dash-card h1{
+
+    color:#0d6efd !important;
+
+    font-size:40px !important;
+
+}
+
+/* ==========================
+   PROFESSIONAL FOOTER
+========================== */
+
+
+.footer{
+
+    background:#0b3d91;
+
+    color:white;
+
+    margin-top:60px;
+
+}
+
+
+
+.footer-container{
+
+
+    display:flex;
+
+    justify-content:space-around;
+
+    flex-wrap:wrap;
+
+    padding:45px 40px;
+
+    gap:30px;
+
+}
+
+
+
+.footer-box{
+
+    width:250px;
+
+}
+
+
+
+.footer-box h3{
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+    color:#ffc107;
+
+}
+
+
+
+.footer-box p{
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    color:#e8e8e8;
+
+}
+
+
+
+.footer-bottom{
+
+    text-align:center;
+
+    background:#06285f;
+
+    padding:15px;
+
+    font-size:14px;
+
+}
+
+
+
+
+.footer-box p:hover{
+
+    color:white;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.footer-container{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.footer-box{
+
+    width:90%;
+
+}
+
+
+}
+/* ==========================
+   PROFESSIONAL NAVBAR
+========================== */
+
+
+.navbar{
+
+    width:100%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 60px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+}
+
+
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#0b3d91;
+
+}
+
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+
+
+.nav-links a:hover{
+
+    color:#0d6efd;
+
+}
+
+
+
+/* Logout Button */
+
+.small-logout{
+
+    background:#dc3545 !important;
+
+    color:white !important;
+
+    padding:8px 18px !important;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+}
+
+
+
+.small-logout:hover{
+
+    background:#b02a37 !important;
+
+}
+
+/* ==========================
+   HOME HERO BACKGROUND IMAGE
+========================== */
+
+
+.hero{
+
+    min-height:600px !important;
+
+    display:flex !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+    text-align:center;
+
+    padding:60px 20px !important;
+
+
+   background-image: url("../images/car-service.jpg") !important;
+
+
+    background-size:cover !important;
+
+    background-position:center !important;
+
+    background-repeat:no-repeat !important;
+
+
+    color:white !important;
+
+}
+
+
+
+.hero-content{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:rgba(0,0,0,0.35);
+
+    padding:35px;
+
+    border-radius:15px;
+
+}
+
+
+
+.hero-content h1{
+
+    font-size:50px !important;
+
+    color:white !important;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-content p{
+
+    width:100% !important;
+
+    color:white !important;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+.hero-buttons{
+
+    margin-top:20px;
+
+}
+
+/* =================================
+   FINAL SOFT MATTE NAVY CARDS
+================================= */
+
+
+/* Section Titles */
+
+#services h2{
+
+    font-size:38px;
+
+    color:#0b3d91;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+}
+
+
+
+#about h2{
+
+    font-size:38px;
+
+    color:#198754;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* Sections */
+
+#services,
+#about{
+
+    padding:80px 40px;
+
+}
+
+
+
+/* Card Layout */
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+}
+
+
+
+/* Card Design */
+
+.card{
+
+
+    width:280px !important;
+
+    min-height:220px;
+
+
+    /* Soft Matte Navy Blue */
+
+    background:#243f5c;
+
+
+    padding:35px 25px;
+
+
+    border-radius:18px;
+
+
+    /* remove outside shadow */
+
+    box-shadow:none;
+
+
+    /* dark premium border */
+
+    border:2px solid #142b43;
+
+
+    text-align:center;
+
+
+    transition:0.4s ease;
+
+
+}
+
+
+
+
+/* Hover Effect */
+
+.card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    background:#2d5278;
+
+
+    border-color:#0d6efd;
+
+
+}
+
+
+
+
+/* Card Title */
+
+.card h3{
+
+
+    color:white;
+
+
+    font-size:22px;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+/* Card Description */
+
+.card p{
+
+
+    color:#d7e5f4;
+
+
+    font-size:16px;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+/* Emoji/Icon */
+
+.card h3:first-letter{
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+/* Service Card Border Colors */
+
+#services .card:nth-child(1){
+
+    border-left:5px solid #ffc107;
+
+}
+
+
+#services .card:nth-child(2){
+
+    border-left:5px solid #0d6efd;
+
+}
+
+
+#services .card:nth-child(3){
+
+    border-left:5px solid #dc3545;
+
+}
+
+
+#services .card:nth-child(4){
+
+    border-left:5px solid #198754;
+
+}
+
+
+
+
+/* About Cards */
+
+#about .card{
+
+    border-left:5px solid #198754;
+
+}
+
+
+
+
+
+/* Smooth Animation */
+
+.card{
+
+    animation:cardShow 0.6s ease;
+
+}
+
+
+
+@keyframes cardShow{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+.card{
+
+    width:90% !important;
+
+}
+
+
+}
+
+/* =================================
+   PROFESSIONAL VEHICLE SERVICE FOOTER
+================================= */
+
+
+.footer{
+
+    background:#081c33;
+
+    color:white;
+
+    margin-top:80px;
+
+}
+
+
+
+/* Footer Main Area */
+
+.footer-container{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    padding:50px 70px;
+
+    gap:35px;
+
+
+}
+
+
+
+/* Footer Boxes */
+
+
+.footer-box{
+
+
+    width:250px;
+
+
+}
+
+
+
+.footer-box h3{
+
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+    color:#4da3ff;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+.footer-box p{
+
+
+    color:#d7e3f0;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+
+.footer-box p:hover{
+
+
+    color:white;
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+/* Bottom Footer */
+
+
+.footer-bottom{
+
+
+    background:#04101f;
+
+
+    text-align:center;
+
+
+    padding:18px;
+
+
+    border-top:1px solid rgba(255,255,255,0.1);
+
+
+}
+
+
+
+.footer-bottom p{
+
+
+    color:#b8c7d9;
+
+    font-size:14px;
+
+
+}
+
+
+
+/* Footer Responsive */
+
+
+@media(max-width:768px){
+
+
+.footer-container{
+
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+
+}
+
+
+.footer-box{
+
+
+    width:90%;
+
+
+}
+
+
+}
+.footer-container{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:flex-start;
+
+    flex-wrap:wrap;
+
+    padding:50px 70px;
+
+    gap:40px;
+
+}
+
+
+.footer-box{
+
+    width:280px;
+
+}
+/* =================================
+   PROFESSIONAL AUTH PAGES
+   LOGIN / REGISTER / ADMIN LOGIN
+================================= */
+
+
+/* Page Background */
+
+.auth-page{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #071a2f,
+        #0d6efd
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px 20px;
+
+}
+
+
+
+/* Form Container */
+
+
+.auth-card{
+
+
+    width:420px;
+
+
+    background:white;
+
+
+    padding:40px;
+
+
+    border-radius:20px;
+
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+
+
+    text-align:center;
+
+
+}
+
+
+
+/* Heading */
+
+
+.auth-card h2{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+    color:#333;
+
+}
+
+
+
+.subtitle{
+
+
+    color:#666;
+
+
+    font-size:15px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+/* Labels */
+
+
+.auth-card label{
+
+
+    display:block;
+
+
+    text-align:left;
+
+
+    margin-bottom:7px;
+
+
+    color:#333;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+/* Inputs */
+
+
+.auth-card input{
+
+
+    width:100%;
+
+
+    padding:14px;
+
+
+    margin-bottom:18px;
+
+
+    border:1px solid #ccc;
+
+
+    border-radius:10px;
+
+
+    font-size:15px;
+
+
+    outline:none;
+
+
+}
+
+
+
+.auth-card input:focus{
+
+
+    border-color:#0d6efd;
+
+
+    box-shadow:0 0 8px rgba(13,110,253,0.3);
+
+
+}
+
+
+
+/* Customer Button */
+
+
+.auth-btn{
+
+
+    width:100%;
+
+
+    padding:14px;
+
+
+    border:none;
+
+
+    border-radius:10px;
+
+
+    background:#0d6efd;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+.auth-btn:hover{
+
+
+    background:#084298;
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+/* Register/Login Link */
+
+
+.auth-link{
+
+
+    margin-top:25px;
+
+
+    color:#555;
+
+
+}
+
+
+
+.auth-link a{
+
+
+    color:#0d6efd;
+
+
+    font-weight:bold;
+
+
+    text-decoration:none;
+
+
+}
+
+
+
+.auth-link a:hover{
+
+
+    text-decoration:underline;
+
+
+}
+
+
+
+/* ADMIN LOGIN STYLE */
+
+
+.admin-card h2{
+
+
+    color:#dc3545 !important;
+
+
+}
+
+
+
+.admin-btn{
+
+
+    background:#dc3545;
+
+
+}
+
+
+
+.admin-btn:hover{
+
+
+    background:#a71d2a;
+
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:600px){
+
+
+.auth-card{
+
+
+    width:95%;
+
+
+    padding:30px;
+
+
+}
+
+
+}
+/* FINAL NAVBAR FIX */
+
+.navbar{
+
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+}
+
+
+.logo{
+
+    font-size:24px;
+    font-weight:bold;
+    color:#0b3d91;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+}
+
+
+.nav-links a{
+
+    color:#333;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+
+.nav-links a:hover{
+
+    color:#0d6efd;
+
+}
+
+
+.small-logout{
+
+    background:#dc3545 !important;
+    color:white !important;
+    padding:8px 18px;
+    border-radius:8px;
+
+}
+
+/* =================================
+   ADMIN USER MANAGEMENT PAGE
+================================= */
+
+
+.admin-page{
+
+    min-height:100vh;
+
+    background:#f4f7fb;
+
+    padding:40px 60px;
+
+}
+
+
+
+
+.admin-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.admin-top h1{
+
+    color:#0b3d91;
+
+    font-size:32px;
+
+}
+
+
+
+
+.table-container{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:1px solid #dce6f2;
+
+}
+
+
+
+.table-container h2{
+
+    color:#0b3d91;
+
+    margin-bottom:25px;
+
+    text-align:left;
+
+}
+
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+}
+
+
+
+thead{
+
+    background:#0b3d91;
+
+    color:white;
+
+}
+
+
+
+th{
+
+    padding:15px;
+
+    font-size:16px;
+
+}
+
+
+
+td{
+
+    padding:14px;
+
+    color:#333;
+
+    border-bottom:1px solid #eee;
+
+    text-align:center;
+
+}
+
+
+
+
+tbody tr:hover{
+
+    background:#f1f7ff;
+
+}
+
+
+
+
+
+/* Role badge */
+
+td:nth-child(5){
+
+    color:#0d6efd;
+
+    font-weight:bold;
+
+}
+
+
+
+
+/* Delete button */
+
+
+.delete-btn{
+
+
+    background:#dc3545 !important;
+
+    color:white !important;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.delete-btn:hover{
+
+    background:#b02a37 !important;
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.admin-page{
+
+    padding:20px;
+
+}
+
+
+.admin-top{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+.table-container{
+
+    overflow-x:auto;
+
+}
+
+
+}
+/* =================================
+   ADMIN BOOKING TABLE
+================================= */
+
+
+.pending-status{
+
+    background:#ffc107;
+
+    color:#222;
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.approve-btn{
+
+    background:#198754;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    margin-right:8px;
+
+    font-weight:bold;
+
+}
+
+
+
+.reject-btn{
+
+    background:#dc3545;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.approve-btn:hover{
+
+    background:#146c43;
+
+}
+
+
+
+.reject-btn:hover{
+
+    background:#b02a37;
+
+}
+.pending-status{
+
+    background:#ffc107;
+
+    color:#000;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.approved-status{
+
+    background:#198754;
+
+    color:white;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.completed-status{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+/* =====================================
+   PROFESSIONAL ADMIN DASHBOARD THEME
+===================================== */
+
+
+/* BODY */
+
+body{
+
+    background:#f4f7fb;
+
+    font-family:'Segoe UI',Arial,sans-serif;
+
+}
+
+
+
+
+/* ================================
+        ADMIN SIDEBAR
+================================ */
+
+
+.admin-sidebar{
+
+    width:250px;
+
+    height:100vh;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    background:#081c33;
+
+    padding:30px 18px;
+
+    color:white;
+
+}
+
+
+
+.admin-logo{
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:45px;
+
+    color:white;
+
+}
+
+
+
+.admin-sidebar a{
+
+    display:block;
+
+    color:#d9e6f5;
+
+    text-decoration:none;
+
+    padding:14px 18px;
+
+    margin:12px 0;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+
+
+.admin-sidebar a:hover{
+
+    background:#0d6efd;
+
+    color:white;
+
+}
+
+
+
+
+
+/* ================================
+        MAIN AREA
+================================ */
+
+
+.admin-main{
+
+    margin-left:250px;
+
+    width:calc(100% - 250px);
+
+}
+
+
+
+
+
+/* HEADER */
+
+
+.admin-header{
+
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 45px;
+
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.admin-header h2{
+
+
+    margin:0;
+
+    color:#0b3d91;
+
+    font-size:28px;
+
+}
+
+
+
+
+
+/* LOGOUT BUTTON */
+
+
+.admin-logout{
+
+
+    background:#dc3545;
+
+    color:white;
+
+    padding:10px 25px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.admin-logout:hover{
+
+
+    background:#b02a37;
+
+}
+
+
+
+
+
+/* ================================
+        CONTENT
+================================ */
+
+
+.admin-container{
+
+
+    padding:40px;
+
+}
+
+
+
+.admin-title{
+
+
+    color:#0b3d91;
+
+    margin-bottom:30px;
+
+    font-size:28px;
+
+}
+
+
+
+
+
+/* ================================
+        CARDS
+================================ */
+
+
+
+.admin-cards{
+
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+
+.admin-card{
+
+
+    width:240px;
+
+
+    min-height:170px;
+
+
+    background:linear-gradient(
+        135deg,
+        #17375e,
+        #081c33
+    );
+
+
+    padding:30px;
+
+
+    border-radius:18px;
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+.admin-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    background:linear-gradient(
+        135deg,
+        #214f82,
+        #102b4c
+    );
+
+
+}
+
+
+
+
+.admin-card h3{
+
+
+    color:#dce8f5;
+
+    margin-bottom:20px;
+
+    font-size:20px;
+
+
+}
+
+
+
+.admin-card h1{
+
+
+    font-size:42px;
+
+    margin:15px 0;
+
+    color:white;
+
+
+}
+
+
+
+.admin-card p{
+
+
+    color:#c7d7e8;
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+/* ================================
+        MANAGEMENT BUTTONS
+================================ */
+
+
+
+.manage-card a{
+
+
+    display:inline-block;
+
+    margin-top:20px;
+
+
+    background:#0d6efd;
+
+
+    color:white;
+
+
+    padding:10px 25px;
+
+
+    border-radius:8px;
+
+
+    text-decoration:none;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+.manage-card a:hover{
+
+
+    background:#084298;
+
+
+}
+
+
+
+
+
+
+/* ================================
+        RESPONSIVE
+================================ */
+
+
+@media(max-width:800px){
+
+
+.admin-sidebar{
+
+
+    width:190px;
+
+
+}
+
+
+
+.admin-main{
+
+
+    margin-left:190px;
+
+
+    width:calc(100% - 190px);
+
+
+}
+
+
+
+.admin-header{
+
+
+    padding:20px;
+
+
+}
+
+
+.admin-container{
+
+
+    padding:20px;
+
+
+}
+
+
+
+}
+/* ================================
+   ADMIN SIDEBAR COMMON STYLE
+================================ */
+
+
+body{
+    background:#f4f7fb;
+}
+
+
+
+.sidebar{
+
+    width:250px;
+
+    height:100vh;
+
+    background:#0b1f38;
+
+    color:white;
+
+    padding:30px 18px;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+}
+
+
+
+.sidebar .logo{
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:45px;
+
+    color:white;
+
+}
+
+
+
+.sidebar a{
+
+    display:block;
+
+    color:#dce8f5;
+
+    text-decoration:none;
+
+    padding:14px 18px;
+
+    margin:12px 0;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+
+
+.sidebar a:hover{
+
+    background:#17375e;
+
+    color:white;
+
+}
+
+
+
+
+.main{
+
+    margin-left:250px;
+
+    width:calc(100% - 250px);
+
+}
+
+
+
+
+.top-header{
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 45px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+.top-header h2{
+
+    color:#0b3d91;
+
+    margin:0;
+
+}
+
+
+
+.logout-btn{
+
+    background:#dc3545;
+
+    color:white !important;
+
+    padding:10px 25px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.container{
+
+    padding:40px;
+
+}
+
+
+
+
+.table-container{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+.table-container h2{
+
+    color:#0b3d91;
+
+    margin-bottom:25px;
+
+    text-align:left;
+
+}
+
+
+/* ==========================
+   SERVICE TABLE DESIGN
+========================== */
+
+
+.service-name{
+
+    background:#eaf2ff;
+
+    color:#0b3d91;
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.price-badge{
+
+    background:#198754;
+
+    color:white;
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.table-container table{
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+
+
+.edit-btn{
+
+    background:#0d6efd !important;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+}
+
+
+
+.delete-btn{
+
+    background:#dc3545 !important;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+}
+
+
+
+.edit-btn:hover{
+
+    background:#084298 !important;
+
+}
+
+
+
+.delete-btn:hover{
+
+    background:#b02a37 !important;
+
+}
+/* =====================================
+   PROFESSIONAL ADD SERVICE FORM CARD
+===================================== */
+
+
+.add-service-card{
+
+    width:420px;
+
+    margin:40px auto;
+
+    background:linear-gradient(
+        145deg,
+        #ffffff,
+        #f4f8ff
+    );
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border:1px solid #dbe7f5;
+
+    box-shadow:
+    0 10px 30px rgba(11,61,145,0.15);
+
+    transition:0.3s;
+
+}
+
+
+
+.add-service-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(11,61,145,0.25);
+
+}
+
+
+
+
+
+/* Title */
+
+.add-service-card h2{
+
+    text-align:center;
+
+    color:#0b3d91;
+
+    font-size:26px;
+
+    margin-bottom:30px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/* Remove default form style */
+
+.add-service-card form{
+
+    width:100%;
+
+    margin:0;
+
+    padding:0;
+
+    background:none;
+
+    box-shadow:none;
+
+}
+
+
+
+
+
+/* Labels */
+
+
+.add-service-card label{
+
+    display:block;
+
+    text-align:left;
+
+    color:#243447;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    margin-top:18px;
+
+}
+
+
+
+
+
+/* Inputs */
+
+
+.add-service-card input{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border-radius:10px;
+
+    border:1px solid #cbd8e8;
+
+    font-size:15px;
+
+    outline:none;
+
+    background:white;
+
+}
+
+
+
+
+
+.add-service-card input:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:
+    0 0 8px rgba(13,110,253,0.25);
+
+}
+
+
+
+
+
+/* Add Button */
+
+
+.add-service-card button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:14px;
+
+
+    background:linear-gradient(
+        135deg,
+        #0d6efd,
+        #0b3d91
+    );
+
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+
+.add-service-card button:hover{
+
+    background:linear-gradient(
+        135deg,
+        #084298,
+        #06285f
+    );
+
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   FINAL ADMIN LOGIN TITLE FIX
+================================ */
+
+.auth-card.admin-card h2{
+
+    color:#dc3545 !important;
+
+    background:none !important;
+
+    -webkit-text-fill-color:#dc3545 !important;
+
+    font-size:32px !important;
+
+}
+
+
+
+
+
+
+.admin-card h2{
+
+    color:#dc3545 !important;
+
+}
+
+/* FORCE ADMIN LOGIN TITLE COLOR */
+
+body .admin-card h2{
+    color:#dc3545 !important;
+}
