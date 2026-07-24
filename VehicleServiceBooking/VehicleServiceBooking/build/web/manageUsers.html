@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Customer Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin-dashboard.css">
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<body>
+
+
+
+
+<div class="admin-sidebar">
+
+
+<div class="admin-logo">
+
+<i class="fa-solid fa-car"></i>
+
+<span>
+Vehicle Service
+</span>
+
+<small>
+Admin Panel
+</small>
+
+</div>
+
+
+
+
+<a href="adminDashboard.html" >
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+
+
+<a href="manageUsers.html" class="active">
+
+<i class="fa-solid fa-users"></i>
+
+Users
+
+</a>
+
+
+
+
+<a href="adminBookings.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Bookings
+
+</a>
+
+
+
+
+<a href="manageServices.html">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+Services
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- MAIN AREA -->
+
+
+<div class="main">
+
+
+
+<!-- HEADER -->
+
+
+<div class="top-header">
+
+
+<h2>
+Customer Management
+</h2>
+
+
+
+<a href="LogoutServlet" class="logout-btn">
+
+Logout
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- CONTENT -->
+
+
+<div class="container">
+
+
+
+<div class="table-container">
+
+
+
+<h2>
+Customer Details
+</h2>
+
+
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+User ID
+</th>
+
+
+<th>
+Name
+</th>
+
+
+<th>
+Email
+</th>
+
+
+<th>
+Phone
+</th>
+
+
+<th>
+Role
+</th>
+
+
+<th>
+Action
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="userTable">
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+fetch("AdminUserServlet")
+
+
+.then(response => response.text())
+
+
+.then(data => {
+
+
+document.getElementById("userTable").innerHTML=data;
+
+
+})
+
+
+
+.catch(error=>{
+
+
+console.log(error);
+
+
+});
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
