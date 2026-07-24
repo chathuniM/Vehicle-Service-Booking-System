@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Customer Dashboard</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="css/customer.css">
+
+
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="wrapper">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-car"></i>
+
+<h2>
+Vehicle Service
+</h2>
+
+<p>
+Customer Panel
+</p>
+
+</div>
+
+
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html" class="active">
+
+<i class="fa-solid fa-house"></i>
+
+<span>
+Dashboard
+</span>
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="addVehicle.html">
+
+<i class="fa-solid fa-car"></i>
+
+<span>
+Add Vehicle
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="vehicles.html">
+
+<i class="fa-solid fa-list"></i>
+
+<span>
+My Vehicles
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="booking.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>
+Book Service
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="bookingStatus.html">
+
+<i class="fa-solid fa-clock"></i>
+
+<span>
+Booking Status
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="serviceHistory.html">
+
+<i class="fa-solid fa-history"></i>
+
+<span>
+Service History
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="ProfileServlet">
+
+<i class="fa-solid fa-user"></i>
+
+<span>
+My Profile
+</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="reminder.html">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>
+Service Reminder
+</span>
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="LogoutServlet">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>
+Logout
+</span>
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+
+</aside>
+
+
+
+
+
+<!-- MAIN CONTENT -->
+
+
+<div class="main">
+
+
+
+
+
+<!-- HEADER -->
+
+
+<div class="header">
+
+
+
+<div>
+
+<h2>
+Welcome Customer
+</h2>
+
+
+<p>
+Manage your vehicles and service bookings easily
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="header-right">
+
+
+
+<div class="profile">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+
+
+<a href="LogoutServlet" class="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- DASHBOARD TITLE -->
+
+
+<h2>
+Dashboard Overview
+</h2>
+
+
+
+
+
+
+<!-- DASHBOARD CARDS -->
+
+
+<div class="dashboard-cards">
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-car"></i>
+
+</div>
+
+
+<h3>
+Add Vehicle
+</h3>
+
+
+<p>
+Register your vehicle details to start booking services.
+</p>
+
+
+<a href="addVehicle.html">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-list"></i>
+
+</div>
+
+
+<h3>
+My Vehicles
+</h3>
+
+
+<p>
+View all your registered vehicles.
+</p>
+
+
+<a href="vehicles.html">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+</div>
+
+
+<h3>
+Book Service
+</h3>
+
+
+<p>
+Schedule your vehicle maintenance service.
+</p>
+
+
+<a href="booking.html">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-clock"></i>
+
+</div>
+
+
+<h3>
+Booking Status
+</h3>
+
+
+<p>
+Check your current service booking status.
+</p>
+
+
+<a href="bookingStatus.html">
+
+Open
+
+</a>
+
+
+</div>
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-history"></i>
+
+</div>
+
+
+<h3>
+Service History
+</h3>
+
+
+<p>
+View your completed service records.
+</p>
+
+
+<a href="serviceHistory.html">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+
+<h3>
+My Profile
+</h3>
+
+
+<p>
+View and manage your account details.
+</p>
+
+
+<a href="ProfileServlet">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-bell"></i>
+
+</div>
+
+
+<h3>
+Service Reminder
+</h3>
+
+
+<p>
+Check upcoming service reminders.
+</p>
+
+
+<a href="reminder.html">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- RECENT BOOKINGS -->
+
+
+<div class="table-card">
+
+
+
+<div class="table-header">
+
+
+<h2>
+Recent Bookings
+</h2>
+
+
+
+<input type="text" 
+class="search-box" 
+placeholder="Search bookings...">
+
+
+
+</div>
+
+
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Service
+</th>
+
+
+<th>
+Vehicle
+</th>
+
+
+<th>
+Date
+</th>
+
+
+<th>
+Status
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+<tbody id="recentBookings">
+
+</tbody>
+
+
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- QUICK ACTIONS -->
+
+
+<div class="table-card">
+
+
+<div class="table-header">
+
+
+<h2>
+Quick Actions
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="dashboard-cards">
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+
+<h3>
+Add New Vehicle
+</h3>
+
+
+<p>
+Register another vehicle.
+</p>
+
+
+<a href="addVehicle.html">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dash-card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-calendar"></i>
+
+</div>
+
+
+<h3>
+Book Appointment
+</h3>
+
+
+<p>
+Schedule a service appointment.
+</p>
+
+
+<a href="booking.html">
+
+Open
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<footer>
+
+
+<p>
+© 2026 Vehicle Service Booking System
+</p>
+
+
+</footer>
+
+
+
+
+</div>
+
+
+</div>
+
+<script>
+
+fetch("RecentBookingsServlet")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("recentBookings").innerHTML = data;
+});
+
+</script>
+
+
+
+</body>
+
+
+</html>
